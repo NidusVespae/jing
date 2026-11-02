@@ -1,0 +1,41 @@
+{
+  "registry": "assets.md",
+
+  "clusters": {
+    "public": ["realname", "business"],
+    "private": ["handle", "github", "site"]
+  },
+
+  "domains": {
+    "example-business.com": "business",
+    "example-handle.net": "site"
+  },
+
+  "github_accounts": {
+    "your-github-handle": "github"
+  },
+
+  "handles": {
+    "your-github-handle": "github",
+    "Example Business": "business"
+  },
+
+  "private_identifiers": [
+    {"label": "real name", "value": "<Your Full Name>", "persona": "realname"},
+    {"label": "personal email", "value": "<you@example.com>", "persona": "realname"},
+    {"label": "home town", "value": "<Your Town>", "persona": "realname"},
+    {"label": "business email", "value": "<hello@example-business.com>", "persona": "business"}
+  ],
+
+  "note_frontmatter": {"type": "analysis"},
+  "note_links": [],
+  "summary_heading": "Summary",
+
+  "manual_checks": [
+    "Alias accounts (Discord, forums): no linked/connected accounts shared with your real accounts",
+    "Alias accounts: signed up with a different email and phone number than your real accounts",
+    "Alias and real accounts are not members of the same small communities (mutual membership is visible)",
+    "No reused avatar, bio phrasing, or username fragments between alias and real accounts",
+    "Shared code carries no author name or personal email in headers or LICENSE"
+  ]
+}

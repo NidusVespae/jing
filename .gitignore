@@ -1,0 +1,7 @@
+mirror.json
+assets.md
+*.md.out
+linkage*.md
+!README.md
+!assets.example.md
+__pycache__/

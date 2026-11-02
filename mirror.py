@@ -40,7 +40,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-UA = "jing-mirror/1.2 (self-audit of owner's own assets)"
+UA = "jing-mirror/1.3 (self-audit of owner's own assets)"
 TIMEOUT = 20
 MAX_COMMITS_PER_REPO = 300
 SEV_ORDER = {"CRITICAL": 0, "HIGH": 1, "MEDIUM": 2, "LOW": 3, "INFO": 4}
@@ -87,6 +87,9 @@ class Audit:
                 self.cluster_of[m] = cname
 
     def reading(self, source, target, ok, detail=""):
+        # error pages arrive as raw HTML; keep the status line, not the page
+        detail = re.sub(r"<[^>]+>", " ", str(detail))
+        detail = re.sub(r"\s+", " ", detail).strip()[:160]
         self.readings.append((source, target, ok, detail))
 
     def link(self, a, b, kind, field, source, value, conf):
